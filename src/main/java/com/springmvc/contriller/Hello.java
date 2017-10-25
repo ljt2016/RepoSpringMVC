@@ -10,6 +10,6 @@ public class Hello {
     @RequestMapping(value="/Hello")  
     public String HelloWorld(Model model){  
         model.addAttribute("message","Hello World!!!");  
-        return "HelloWorld";  
-    }  
+        return "HelloWorld";
+    }
 }  
