@@ -18,6 +18,9 @@ public class RepoComparedResultServiceImpl implements RepoComparedResultService 
 		RepoComparedResult repoComparedResult = repoComparedResultDao.getRepoComparedResults(repoName);
 		ArrayList<RepoSimilar> repoSimilars = repoComparedResult.getRepoSimilars();
 		
+		if (repoSimilars == null) {
+			return new ArrayList<String>();
+		}
 		Collections.sort(repoSimilars,new Comparator<RepoSimilar>(){
 
 			public int compare(RepoSimilar o1, RepoSimilar o2) {
