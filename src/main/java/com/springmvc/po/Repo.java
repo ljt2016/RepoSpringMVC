@@ -1,10 +1,16 @@
 package com.springmvc.po;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Repo {
+	@SerializedName("repo_order")
 	private int repoOrder;
-	private String language;
+	@SerializedName("repo_id")
 	private int repoId;
+	@SerializedName("repo_name")
 	private String repoName;
+	private String language;
+	@SerializedName("readme")
 	private String readMe;
 
 	public int getRepoOrder() {
@@ -48,4 +54,3 @@ public class Repo {
 	}
 
 }
-
