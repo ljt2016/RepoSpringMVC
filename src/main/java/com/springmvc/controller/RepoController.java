@@ -32,7 +32,7 @@ public class RepoController {
 		return repos;
 	}
 
-	public void test_tool(){
+	public void testTool(){
 		System.out.print("this is test function.");
 	}
 }
