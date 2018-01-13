@@ -24,11 +24,15 @@ public class RepoController {
 	public ArrayList<Repo> RepoSearch(@RequestParam("searchInfo") String repoName) {
 		
 		ArrayList<String> topTenRepoNames = repoComparedResultService.getTopTenRepoNames(repoName);
-		if (topTenRepoNames.size() ==0 ) {
+		if (topTenRepoNames.size() == 0 ) {
 			return null;
 		}
 		ArrayList<Repo> repos = repoService.getTopTenRepos(topTenRepoNames);
 
 		return repos;
+	}
+
+	public void test_tool(){
+		System.out.print("this is test function.");
 	}
 }
